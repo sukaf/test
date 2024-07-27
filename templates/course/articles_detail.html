@@ -1,0 +1,87 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<script id="article-variations" type="application/json">
+    {{ article_variations|safe }}
+</script>
+
+<div class="card mb-3 border-0 shadow-sm">
+    <div class="row">
+        <div class="col-4">
+            {% if article.thumbnail %}
+                <img src="{{ article.thumbnail.url }}" class="card-img-top" alt="{{ article.title }}" />
+            {% endif %}
+        </div>
+        <div class="col-8">
+            <div class="card-body">
+                <h5>{{ article.title }}</h5>
+                <p class="card-text">{{ article.full_description|safe }}</p>
+                Категория: <a href="{% url 'articles_by_category' article.category.slug %}">{{ article.category.title }}</a></small>
+            </div>
+            <div class="card-body">
+                <p class="card-text"><strong>Преподаватель:</strong> {{ article.teacher.name }}</p>
+                <img src="{{ article.teacher.photo.url }}" class="card-img-top" alt="{{ article.teacher.name }}">
+            </div>
+            <div class="card-body">
+                <div class="cart-button" data-article-id="{{ article.id }}">
+                    {% if article.id in cart_article_ids %}
+                        <button class="btn btn-sm btn-secondary btn-add-to-cart" data-article-id="{{ article.id }}">Добавлено</button>
+                    {% else %}
+                        <button class="btn btn-sm btn-primary openBtn" data-article-id="{{ article.id }}">Добавить в корзину</button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if article.tags.all %}
+    <div class="card-footer border-0">
+        Теги записи: {% for tag in article.tags.all %} <a href="{% url 'articles_by_tags' tag.slug %}">{{ tag }}</a>, {% endfor %}
+    </div>
+    {% endif %}
+
+    <!--<div class="rating-buttons">
+        <button class="btn btn-sm btn-primary" data-article="{{ article.id }}" data-value="1">Лайк</button>
+        <button class="btn btn-sm btn-secondary" data-article="{{ article.id }}" data-value="-1">Дизлайк</button>
+        <button class="btn btn-sm btn-secondary rating-sum">{{ article.get_sum_rating }}</button>
+    </div>-->
+    <!-- Диалоговое окно для выбора вариации -->
+    <dialog id="modal">
+        <form id="add-to-cart-form" method="post">
+            <input type="hidden" name="article_id" id="article-id">
+            <h2>Выберите вариацию курса</h2>
+            <div id="variations-container"></div>
+            <button type="button" id="btn-add-to-cart-dialog" class="btn btn-sm btn-primary">Добавить в корзину</button>
+            <br>
+            <button type="button" id="closeBtn" class="btn btn-sm btn-secondary">Закрыть</button>
+        </form>
+    </dialog>
+</div>
+
+
+
+<!--
+<div class="card mb-2 border-0">
+    <div class="card-body">
+        <h5 class="card-title">
+            Комментарии
+        </h5>
+        {% include 'course/comments/comments_list.html' %}
+    </div>
+</div>
+-->
+
+{% endblock %}
+
+{% block script %}
+<!--<script src="{% static 'custom/js/ratings.js' %}"></script>-->
+<script src="{% static 'custom/js/custom.js' %}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+{% endblock %}
+
+
+
+

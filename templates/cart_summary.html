@@ -1,0 +1,82 @@
+{% load static %}
+<div class="cart-summary fixed-sidebar">
+    <h3>Подробности заказа</h3>
+    <ul id="cart-items-summary">
+        {% for item in cart_items %}
+        <li class="cart-item-summary">
+            <div class="cart-item-details-summary">
+                <p>{{ item.title }}</p>
+                <p>{{ item.price_month }} ₽</p>
+            </div>
+        </li>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="cart-summary-totals">
+        <p>Сумма скидки: <span id="total_discount">-{{ total_discount }} ₽</span></p>
+        <p>Общее количество товаров: <span id="total_quantity">{{ total_quantity }}</span></p>
+        <p>К оплате сейчас: <span id="total_price">{{ total_price }} ₽</span></p>
+    </div>
+    <form id="payment-form" method="post" action="{% url 'create_payment' %}">
+        {% csrf_token %}
+        <!-- Скрытые поля для данных о товарах -->
+        {% for item in cart_items %}
+            <input type="hidden" name="amounts[]" value="{{ item.price_total }}">
+            <input type="hidden" name="descriptions[]" value="{{ item.title }}">
+            <input type="hidden" name="course_ids[]" value="{{ item.article_id }}">
+        {% endfor %}
+        <button type="submit" class="btn btn-dark btn-pay">Перейти к оплате {{ total_price }} ₽</button>
+    </form>
+
+    <div class="promo-code-section">
+        <input type="text" class="form-control" placeholder="Введите промокод" id="promo-code-input">
+        <button class="btn btn-secondary btn-apply-promo">Применить</button>
+    </div>
+
+    <div class="other-user-section">
+        <input type="checkbox" id="buy-for-other-user">
+        <label for="buy-for-other-user">Купить для другого пользователя</label>
+    </div>
+
+    <div class="payment-link-section">
+        <p>Оплачиваете не вы?</p>
+        <button class="btn btn-outline-primary btn-copy-payment-link">Скопировать ссылку на оплату</button>
+    </div>
+</div>
+
+<style>
+    .fixed-sidebar {
+        position: fixed;
+        top: 100px;
+        right: 0;
+        width: 25%;
+        padding: 15px;
+        background-color: #f8f9fa;
+        border: 1px solid #dee2e6;
+        z-index: 1000;
+        overflow-y: auto;
+        max-height: calc(100vh - 100px);
+    }
+
+    .cart-summary-totals p {
+        font-weight: bold;
+    }
+
+    .promo-code-section,
+    .other-user-section,
+    .payment-link-section {
+        margin-top: 15px;
+    }
+
+    .promo-code-section input {
+        margin-bottom: 10px;
+    }
+</style>
+
+
+{% block script %}
+<script src="{% static 'custom/js/cart_summary.js' %}"></script>
+<script src="{% static 'custom/js/cart.js' %}"></script>
+<script src="{% static 'custom/js/utils.js' %}"></script>
+{% endblock %}
+

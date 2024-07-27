@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="card mb-3 border-0 nth-shadow">
+        <div class="card-body">
+            <div class="card-title nth-card-title">
+                <h4>Регистрация на сайте</h4>
+            </div>
+            <form method="post" action="{% url 'register' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-dark mt-2">Зарегистрироваться</button>
+                <title>reCAPTCHA demo: Simple page</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <body>
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="6Ldj4sgpAAAAAKgtcnMPBDY-6PZSBPsSyNZWOJIx"></div>
+      <br/>
+    </form>
+  </body>
+            </form>
+        </div>
+    </div>
+{% endblock %}

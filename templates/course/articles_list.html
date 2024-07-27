@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<script id="article-variations" type="application/json">
+    {{ article_variations|safe }}
+</script>
+
+<link href="{% static 'bootstrap/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+{% for article in articles %}
+<div class="card mb-3" data-teacher-id="{{ article.teacher.id }}">
+    <div class="row">
+        <div class="col-4">
+            {% if article.thumbnail %}
+                <img src="{{ article.thumbnail.url }}" class="card-img-top" alt="{{ article.title }}" />
+            {% endif %}
+        </div>
+        <div class="col-8">
+            <div class="card-body">
+                <h5 class="card-title"><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h5>
+                <p class="card-text">{{ article.short_description|safe }}</p>
+                <p class="card-text"><strong>Преподаватель:</strong> {{ article.teacher.name }}</p>
+                <img src="{{ article.teacher.photo.url }}" class="card-img-top" alt="{{ article.teacher.name }}" style="width: 100px; height: auto;">
+            </div>
+        </div>
+        <div class="cart-button" data-article-id="{{ article.id }}">
+            {% if article.id in purchased_article_ids %}
+                <button class="btn btn-sm btn-success" disabled>Уже приобретено</button>
+            {% elif article.id in cart_article_ids %}
+                <button class="btn btn-sm btn-secondary btn-add-to-cart" data-article-id="{{ article.id }}">Добавлено</button>
+            {% else %}
+                <button class="btn btn-sm btn-primary openBtn" data-article-id="{{ article.id }}">Добавить в корзину</button>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+<!-- Диалоговое окно для выбора вариации -->
+<dialog id="modal">
+    <form id="add-to-cart-form" method="post">
+        <input type="hidden" name="article_id" id="article-id">
+        <h2>Выберите вариацию курса</h2>
+        <div id="variations-container"></div>
+        <button type="button" id="btn-add-to-cart-dialog" class="btn btn-sm btn-primary">Добавить в корзину</button>
+        <br>
+        <button type="button" id="closeBtn" class="btn btn-sm btn-secondary">Закрыть</button>
+    </form>
+</dialog>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'custom/js/custom.js' %}"></script>
+<script src="{% static 'custom/js/teacher.js' %}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+{% endblock %}
+

@@ -1,0 +1,10 @@
+
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2>Вы успешно деавторизованы</h2>
+        <p>Желаете авторизоваться снова?</p>
+        <p><a href="{% url 'login' %}" class="btn">Войти</a></p>
+    </div>
+{% endblock %}

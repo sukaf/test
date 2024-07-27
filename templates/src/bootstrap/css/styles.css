@@ -1,0 +1,23 @@
+/* styles.css */
+
+.btn-add-to-cart {
+    background-color: green;
+    border-color: green;
+    color: white;
+}
+
+.btn-add-to-cart:hover {
+    background-color: darkgreen;
+    border-color: darkgreen;
+}
+
+.btn-primary {
+    background-color: blue;
+    border-color: blue;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: darkblue;
+    border-color: darkblue;
+}

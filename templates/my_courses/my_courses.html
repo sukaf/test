@@ -1,0 +1,24 @@
+<!-- Обновленный шаблон my_courses.html -->
+
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+<h1>Мои курсы</h1>
+<ul class="courses-list">
+  {% if enrollments %}
+    {% for enrollment in enrollments %}
+      <li>
+        <a href="{% url 'course_detail' enrollment.article.slug %}">{{ enrollment.article.title }}</a>
+        <button class="remove-item-btn" data-enrollment-id="{{ enrollment.id }}">Удалить</button>
+      </li>
+    {% endfor %}
+  {% else %}
+    <p>Вы еще не записаны ни на один курс.</p>
+  {% endif %}
+</ul>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'custom/js/cart_summary.js' %}"></script>
+<script src="{% static 'custom/js/delete_from_my_courses.js' %}"></script>
+{% endblock %}

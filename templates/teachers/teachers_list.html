@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Преподаватели</title>
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet">
+    <style>
+        .teacher-photo {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+<header class="fixed-header">
+    <!-- Код header (как в вашем шаблоне) -->
+</header>
+<main class="container mt-5">
+    <h1>Преподаватели</h1>
+    <div class="row">
+        {% for teacher in teachers %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                {% if teacher.photo %}
+                <img src="{{ teacher.photo.url }}" class="card-img-top teacher-photo" alt="{{ teacher.name }}">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ teacher.name }}</h5>
+                    <p class="card-text">{{ teacher.description }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p>Нет доступных преподавателей.</p>
+        {% endfor %}
+    </div>
+</main>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-SQ6CxekGxEzOIsm9tIcEhpIuGfA3Q2B5z84eVj5tU1x0au2VE3Fv0M6X+JVRmFk3" crossorigin="anonymous"></script>
+</body>
+{% endblock %}

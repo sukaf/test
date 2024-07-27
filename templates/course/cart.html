@@ -1,0 +1,68 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block head %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Корзина</title>
+<script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    {% if total_quantity > 0 %}
+        <h1>Корзина</h1>
+    {% else %}
+        <h1>Корзина пуста</h1>
+    {% endif %}
+    <ul id="cart-items">
+        {% for item in cart_items %}
+        <li class="cart-item" data-article-id="{{ item.article_id }}">
+            <div class="cart-item-image">
+                <img src="{{ item.thumbnail }}" alt="{{ item.title }}" style="width: 100px; height: auto;">
+            </div>
+            <div class="cart-item-details">
+                <h2>{{ item.title }}</h2>
+                <p class="cart-item-info">
+                    <span class="badge">{{ item.status }}</span>
+                    <span class="badge">{{ item.course_type }}</span>
+                </p>
+                <p>Старт: {{ item.start_course }}</p>
+                <p>Количество уроков: {{ item.lessons }}</p>
+                <p>Длительность: {{ item.len_course }}</p>
+                <div class="cart-item-price">
+                    <span class="price-month">{{ item.price_month }} ₽ месяц</span>
+                    <br>
+                    <span class="price-total">{{ item.price_total }} ₽ весь курс</span>
+                </div>
+                {% if item.tariff %}
+                <div class="cart-item-tariff">
+                    <p>Тариф: {{ item.tariff }}</p>
+                </div>
+                {% endif %}
+                <div class="cart-item-quantity">
+                    <!-- Здесь может быть форма для изменения количества товаров -->
+                </div>
+                <div class="cart-button">
+                    <button class="btn btn-danger btn-remove-from-cart" data-article-id="{{ item.article_id }}">Удалить товар</button>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% include 'cart_summary.html' %}  <!-- Включение подробностей заказа -->
+{% endblock %}
+
+{% block sidebar %}
+<!-- Переопределяем блок sidebar и оставляем его пустым, чтобы не включать sidebar.html -->
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'custom/js/utils.js' %}"></script>
+<script src="{% static 'custom/js/cart.js' %}"></script>
+{% endblock %}
+
+
+
+

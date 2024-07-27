@@ -1,0 +1,66 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+<head>
+    <title>Календарь расписания</title>
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js'></script> <!-- Подключаем все локализации -->
+    <style>
+        #calendar {
+            max-width: 700px; /* Установите нужную ширину */
+            margin: 0 auto;
+        }
+        .fc {
+            font-size: 14px; /* Установите нужный размер шрифта */
+        }
+        .fc-event, .fc-event-dot {
+            background-color: transparent !important; /* Убираем задний фон */
+            border: none !important; /* Убираем границу */
+        }
+        .custom-description {
+            color: black !important; /* Устанавливаем цвет текста для description */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>{{ course.title }}</h1>
+    <p>{{ course.full_description|safe }}</p>
+
+    <div id="calendar"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+                locale: 'ru',  // Устанавливаем локализацию на русский
+                events: '/schedule-data/{{ course_slug }}/',
+                eventContent: function(info) {
+                    var descriptionEl = document.createElement('div');
+                    var fullDescriptionEl = document.createElement('div');
+
+                    descriptionEl.innerHTML = info.event.extendedProps.description;
+                    fullDescriptionEl.innerHTML = info.event.extendedProps.full_description;
+
+                    // Добавляем классы для кастомного стиля
+                    descriptionEl.classList.add('custom-description');
+
+                    var arrayOfDomNodes = [descriptionEl, fullDescriptionEl];
+
+                    // Создаем wrapper элемент
+                    var wrapperEl = document.createElement('div');
+                    wrapperEl.append(...arrayOfDomNodes);
+
+                    return { domNodes: [wrapperEl] }
+                }
+            });
+            calendar.render();
+        });
+    </script>
+</body>
+
+{% endblock %}
