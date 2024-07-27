@@ -46,3 +46,7 @@ vine==5.1.0
 vk-api==11.9.9
 wcwidth==0.2.13
 wrapt==1.16.0
+psycopg2-binary
+dj-database-url
+gunicorn
+
