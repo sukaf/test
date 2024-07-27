@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,12 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o(_+*8mhwhg6x*!k5q2_&ke8!zk@sf=m+#mp%b(76x6&603um-'
+
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-o(_+*8mhwhg6x*!k5q2_&ke8!zk@sf=m+#mp%b(76x6&603um-')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'testserver']
+ALLOWED_HOSTS = ['127.0.0.1', 'testserver', 'education-smoky-eta.vercel.app']
 
 CART_SESSION_ID = 'carts'
 
@@ -105,12 +106,12 @@ WSGI_APPLICATION = 'education.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': "django.db.backends.postgresql",
-        'NAME': "App",
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': '127.0.0.1',
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME', 'sql8722548'),
+        'USER': os.environ.get('DB_USER', 'sql8722548'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'JkdudKwmTH'),
+        'HOST': os.environ.get('DB_HOST', 'sql8.freesqldatabase.com'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
     }
 }
 
