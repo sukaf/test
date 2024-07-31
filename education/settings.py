@@ -18,7 +18,7 @@ import environ
 
 
 # Load .env file
-env_file = Path(__file__).resolve().parent.parent / 'docker' / 'env' / '.env.prod'
+env_file = Path(__file__).resolve().parent.parent / 'docker' / 'env' / 'env.prod'
 environ.Env.read_env(env_file)
 
 
