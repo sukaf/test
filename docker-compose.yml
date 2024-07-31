@@ -6,7 +6,6 @@ volumes:
   media:
 
 services:
-
   django:
     build:
       context: .
@@ -26,7 +25,7 @@ services:
       sh -c "python manage.py collectstatic --no-input &&
              python manage.py makemigrations &&
              python manage.py migrate &&
-             gunicorn --workers=4 --reload --max-requests=1000 backend.wsgi -b 0.0.0.0:8000""
+             gunicorn --workers=4 --reload --max-requests=1000 backend.wsgi -b 0.0.0.0:8000"
 
   nginx:
     container_name: nginx
