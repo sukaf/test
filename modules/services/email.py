@@ -15,5 +15,6 @@ def send_contact_email_message(subject, email, content, ip, user_id):
         'ip': ip,
         'user': user,
     })
-    email = EmailMessage(subject, message, settings.EMAIL_SERVER, settings.EMAIL_ADMIN)
-    email.send(fail_silently=False)
+    recipient_list = [settings.EMAIL_ADMIN] if isinstance(settings.EMAIL_ADMIN, str) else settings.EMAIL_ADMIN
+    email_message = EmailMessage(subject, message, settings.EMAIL_SERVER, recipient_list)
+    email_message.send(fail_silently=False)

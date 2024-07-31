@@ -31,13 +31,10 @@
 <body>
     {% include 'header.html' %}
     <div class="container content-container">
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
         <div class="row">
             <div class="col-8">
             {% include 'includes/messages.html' %}
             {% block content %}
-
             {% endblock %}
             {% include 'pagination.html' %}
             </div>
@@ -52,8 +49,10 @@
     <!-- Feedback Button -->
     <button class="feedback-button" onclick="location.href='{% url 'feedback' %}'">Обратная связь</button>
 
+    <!-- INCLUDE JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     {% block script %}
-    <script src="{% static '/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'custom/js/backend.js' %}"></script>
     <script src="{% static 'custom/js/custom.js' %}"></script>
     <script src="{% static 'custom/js/teacher.js' %}"></script>

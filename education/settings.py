@@ -12,6 +12,18 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+import environ
+
+
+# Load .env file
+env_file = Path(__file__).resolve().parent.parent / 'docker' / 'env' / '.env.prod'
+environ.Env.read_env(env_file)
+
+
+# Initialize environ
+env = environ.Env()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -22,13 +34,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-o(_+*8mhwhg6x*!k5q2_&ke8!zk@sf=m+#mp%b(76x6&603um-')
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
+DEBUG = env('DEBUG', default=True)
 
-ALLOWED_HOSTS = ['127.0.0.1', 'testserver', 'education-smoky-eta.vercel.app']
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+
+CSRF_TRUSTED_ORIGINS = env.list('CSRF_TRUSTED_ORIGINS')
 
 CART_SESSION_ID = 'carts'
 
@@ -55,10 +68,10 @@ INSTALLED_APPS = [
     'captcha',
     'modules.teacher',
     'modules.my_courses',
-    'modules.set_courses'
+    'modules.set_courses',
 ]
 
-SITE_ID = 1
+SITE_ID = 2
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -107,11 +120,11 @@ WSGI_APPLICATION = 'education.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', 'sql8722548'),
-        'USER': os.environ.get('DB_USER', 'sql8722548'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'JkdudKwmTH'),
-        'HOST': os.environ.get('DB_HOST', 'sql8.freesqldatabase.com'),
-        'PORT': os.environ.get('DB_PORT', '5432'),
+        'NAME': env('POSTGRES_DB'),
+        'USER': env('POSTGRES_USER'),
+        'PASSWORD': env('POSTGRES_PASSWORD'),
+        'HOST': env('POSTGRES_HOST'),
+        'PORT': env('POSTGRES_PORT'),
     }
 }
 
@@ -171,20 +184,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST = 'smtp.yandex.ru'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_USE_TLS = env('EMAIL_USE_TLS', default=True)
 
-EMAIL_HOST_USER = 'filinbubsa@yandex.ru'
-EMAIL_HOST_PASSWORD = 'kiblcpwwsgzsjjfb'
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 
-EMAIL_SERVER = EMAIL_HOST_USER
+EMAIL_SERVER = env('EMAIL_HOST_USER')
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
-EMAIL_ADMIN = ['filinbubsa@yandex.ru']
+EMAIL_ADMIN = EMAIL_HOST_USER
 
 
-RECAPTCHA_PUBLIC_KEY = "6Ldj4sgpAAAAAKgtcnMPBDY-6PZSBPsSyNZWOJIx"
-RECAPTCHA_PRIVATE_KEY = "6Ldj4sgpAAAAAN9h1yltMysvhinO83eiN799H0P4"
+RECAPTCHA_PUBLIC_KEY = env('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = env('RECAPTCHA_PRIVATE_KEY')
 
 
 customColorPalette = [
@@ -222,46 +235,38 @@ CKEDITOR_5_FILE_STORAGE = 'modules.services.utils.CkeditorCustomStorage'
 
 CKEDITOR_5_CONFIGS = {
     'default': {
-        'toolbar': [
-            'heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList',
-            'blockQuote', 'imageUpload', 'insertTable', 'mediaEmbed'
-        ],
-        'table': {
-            'contentToolbar': [
-                'tableColumn', 'tableRow', 'mergeTableCells',
-                'tableProperties', 'tableCellProperties'
-            ]
-        }
+        'toolbar': ['heading', '|', 'bold', 'italic', 'link',
+                    'bulletedList', 'numberedList', 'blockQuote', 'imageUpload', ],
+
     },
     'extends': {
         'blockToolbar': [
             'paragraph', 'heading1', 'heading2', 'heading3',
-            '|', 'bulletedList', 'numberedList', '|', 'blockQuote',
-            'insertTable', 'mediaEmbed'
+            '|',
+            'bulletedList', 'numberedList',
+            '|',
+            'blockQuote',
         ],
-        'toolbar': [
-            'heading', '|', 'outdent', 'indent', '|', 'bold', 'italic',
-            'link', 'underline', 'strikethrough', 'code', 'subscript',
-            'superscript', 'highlight', '|', 'codeBlock', 'sourceEditing',
-            'insertImage', 'bulletedList', 'numberedList', 'todoList', '|',
-            'blockQuote', 'imageUpload', '|', 'fontSize', 'fontFamily',
-            'fontColor', 'fontBackgroundColor', 'mediaEmbed', 'removeFormat',
-            'insertTable'
-        ],
+        'toolbar': ['heading', '|', 'outdent', 'indent', '|', 'bold', 'italic', 'link', 'underline', 'strikethrough',
+        'code','subscript', 'superscript', 'highlight', '|', 'codeBlock', 'sourceEditing', 'insertImage',
+                    'bulletedList', 'numberedList', 'todoList', '|',  'blockQuote', 'imageUpload', '|',
+                    'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor', 'mediaEmbed', 'removeFormat',
+                    'insertTable',],
         'image': {
-            'toolbar': [
-                'imageTextAlternative', '|', 'imageStyle:alignLeft',
-                'imageStyle:alignRight', 'imageStyle:alignCenter', 'imageStyle:side', '|'
-            ],
+            'toolbar': ['imageTextAlternative', '|', 'imageStyle:alignLeft',
+                        'imageStyle:alignRight', 'imageStyle:alignCenter', 'imageStyle:side',  '|'],
             'styles': [
-                'full', 'side', 'alignLeft', 'alignRight', 'alignCenter'
+                'full',
+                'side',
+                'alignLeft',
+                'alignRight',
+                'alignCenter',
             ]
+
         },
         'table': {
-            'contentToolbar': [
-                'tableColumn', 'tableRow', 'mergeTableCells',
-                'tableProperties', 'tableCellProperties'
-            ],
+            'contentToolbar': [ 'tableColumn', 'tableRow', 'mergeTableCells',
+            'tableProperties', 'tableCellProperties' ],
             'tableProperties': {
                 'borderColors': customColorPalette,
                 'backgroundColors': customColorPalette
@@ -271,12 +276,12 @@ CKEDITOR_5_CONFIGS = {
                 'backgroundColors': customColorPalette
             }
         },
-        'heading': {
+        'heading' : {
             'options': [
-                {'model': 'paragraph', 'title': 'Paragraph', 'class': 'ck-heading_paragraph'},
-                {'model': 'heading1', 'view': 'h1', 'title': 'Heading 1', 'class': 'ck-heading_heading1'},
-                {'model': 'heading2', 'view': 'h2', 'title': 'Heading 2', 'class': 'ck-heading_heading2'},
-                {'model': 'heading3', 'view': 'h3', 'title': 'Heading 3', 'class': 'ck-heading_heading3'}
+                { 'model': 'paragraph', 'title': 'Paragraph', 'class': 'ck-heading_paragraph' },
+                { 'model': 'heading1', 'view': 'h1', 'title': 'Heading 1', 'class': 'ck-heading_heading1' },
+                { 'model': 'heading2', 'view': 'h2', 'title': 'Heading 2', 'class': 'ck-heading_heading2' },
+                { 'model': 'heading3', 'view': 'h3', 'title': 'Heading 3', 'class': 'ck-heading_heading3' }
             ]
         }
     },
@@ -289,13 +294,22 @@ CKEDITOR_5_CONFIGS = {
     }
 }
 
+
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
-        'LOCATION': (BASE_DIR / 'cache'),
+        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+        'LOCATION': env('REDIS_LOCATION'),
     }
 }
 
+CELERY_BROKER_URL = env('CELERY_BROKER_URL')
+CELERY_RESULT_BACKEND = env('CELERY_RESULT_BACKEND')
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_TIMEZONE = 'Europe/Moscow'
 
 AUTHENTICATION_BACKENDS = [
     'modules.system.backends.UserModelBackend'

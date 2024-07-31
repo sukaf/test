@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(response => response.json())
             .then(data => {
-                updateCartButton(articleId, data.in_cart);
+                updateCartButton(articleId, data.in_cart, data.already_purchased);
             })
             .catch(error => {
                 console.error('Error checking cart:', error);
@@ -44,16 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
                             </label>
                         </div>
                     `).join('');
-                    document.getElementById('btn-add-to-cart-dialog').setAttribute('data-article-id', articleId); // добавляем атрибут data-article-id кнопке
+                    document.getElementById('btn-add-to-cart-dialog').setAttribute('data-article-id', articleId);
                     modal.showModal();
                 } else {
                     isAddingToCart = true;
                     disableButton(event.target);
                     addToCart(null, articleId)
                         .then(data => {
-                            updateCartButton(articleId, true);
+                            updateCartButton(articleId, true, false);
                             updateCart(data.total_quantity, data.total_price, data.cart_items);
-                            updateButtonsOnOtherPages(articleId, true);
                         })
                         .catch(error => {
                             console.error('Error adding to cart:', error);
@@ -67,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 event.stopImmediatePropagation();
                 const selectedVariation = document.querySelector('input[name="variation"]:checked');
                 const variationId = selectedVariation ? selectedVariation.value : null;
-                const articleId = event.target.getAttribute('data-article-id'); // получаем articleId
+                const articleId = event.target.getAttribute('data-article-id');
 
                 if (variationId) {
                     isAddingToCart = true;
@@ -76,7 +75,42 @@ document.addEventListener('DOMContentLoaded', function() {
                         .then(data => {
                             modal.close();
                             updateCart(data.total_quantity, data.total_price, data.cart_items);
-                            updateCartButton(articleId, true); // обновление кнопки после закрытия модального окна
+                            updateCartButton(articleId, true, false);
+                        })
+                        .catch(error => {
+                            console.error('Error adding to cart:', error);
+                        })
+                        .finally(() => {
+                            isAddingToCart = false;
+                            enableButton(event.target);
+                        });
+                } else {
+                    alert('Пожалуйста, выберите вариацию курса.');
+                }
+            } else if (event.target.classList.contains('btn-add-to-cart')) {
+                event.stopImmediatePropagation();
+                const articleId = event.target.getAttribute('data-article-id');
+                const variations = articleVariations[articleId];
+
+                if (variations && variations.length > 0) {
+                    variationsContainer.innerHTML = variations.map(variation => `
+                        <div>
+                            <input type="radio" name="variation" value="${variation.id}" id="variation-${variation.id}">
+                            <label for="variation-${variation.id}">
+                                <img src="${variation.image_url}" alt="${variation.name}" style="width: 50px; height: 50px;">
+                                ${variation.name} - ${variation.price}
+                            </label>
+                        </div>
+                    `).join('');
+                    document.getElementById('btn-add-to-cart-dialog').setAttribute('data-article-id', articleId);
+                    modal.showModal();
+                } else {
+                    isAddingToCart = true;
+                    disableButton(event.target);
+                    addToCart(null, articleId)
+                        .then(data => {
+                            updateCartButton(articleId, true, false);
+                            updateCart(data.total_quantity, data.total_price, data.cart_items);
                         })
                         .catch(error => {
                             console.error('Error adding to cart:', error);
@@ -86,19 +120,15 @@ document.addEventListener('DOMContentLoaded', function() {
                             enableButton(event.target);
                         });
                 }
-            } else if (event.target.id === 'closeBtn') {
-                event.stopImmediatePropagation();
-                modal.close();
-            } else if (event.target.classList.contains('btn-add-to-cart')) {
+            } else if (event.target.classList.contains('btn-remove-from-cart')) {
                 event.stopImmediatePropagation();
                 const articleId = event.target.getAttribute('data-article-id');
                 isRemovingFromCart = true;
                 disableButton(event.target);
                 removeFromCart(articleId)
                     .then(data => {
-                        updateCartButton(articleId, false);
                         updateCart(data.total_quantity, data.total_price, data.cart_items);
-                        updateButtonsOnOtherPages(articleId, false);
+                        updateCartButton(articleId, false, false);
                     })
                     .catch(error => {
                         console.error('Error removing from cart:', error);
@@ -119,87 +149,68 @@ document.addEventListener('DOMContentLoaded', function() {
         button.disabled = false;
     }
 
-    function updateCartButton(articleId, inCart) {
+    function updateCartButton(articleId, inCart, alreadyPurchased) {
         const button = document.querySelector(`.cart-button[data-article-id="${articleId}"] button`);
-        if (!button) {
-            console.error('Button not found for article_id:', articleId);
-            return;
-        }
-        if (inCart) {
-            button.classList.add('btn-secondary');
-            button.classList.remove('btn-primary');
+        if (alreadyPurchased) {
+            button.className = 'btn btn-sm btn-success';
+            button.textContent = 'Уже приобретено';
+            button.disabled = true;
+        } else if (inCart) {
+            button.className = 'btn btn-sm btn-secondary btn-add-to-cart';
             button.textContent = 'Добавлено';
-            button.classList.remove('openBtn');
-            button.classList.add('btn-add-to-cart');
+            button.disabled = false;
         } else {
-            button.classList.remove('btn-secondary');
-            button.classList.add('btn-primary');
+            button.className = 'btn btn-sm btn-primary openBtn';
             button.textContent = 'Добавить в корзину';
-            button.classList.add('openBtn');
-            button.classList.remove('btn-add-to-cart');
+            button.disabled = false;
         }
+    }
+
+    function addToCart(variationId, articleId) {
+        const url = '/cart/add/';
+        const data = {
+            variation_id: variationId,
+            article_id: articleId
+        };
+
+        return fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCookie('csrftoken')
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json());
+    }
+
+    function removeFromCart(articleId) {
+        const url = `/cart/remove/${articleId}/`;
+        return fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': getCookie('csrftoken')
+            }
+        })
+        .then(response => response.json());
     }
 
     function updateCart(totalQuantity, totalPrice, cartItems) {
         const cartCountElement = document.getElementById('cart-count');
-        const cartTotalPriceElement = document.getElementById('cart-total-price');
+        const cartTotalElement = document.getElementById('cart-total');
+        cartCountElement.textContent = totalQuantity;
+        cartTotalElement.textContent = totalPrice;
+
         const cartItemsContainer = document.getElementById('cart-items');
-
-        if (cartCountElement) {
-            cartCountElement.textContent = totalQuantity;
-        }
-        if (cartTotalPriceElement) {
-            cartTotalPriceElement.textContent = totalPrice;
-        }
-        if (cartItemsContainer) {
-            cartItemsContainer.innerHTML = '';
-            cartItems.forEach(item => {
-                const itemElement = document.createElement('li');
-                itemElement.innerHTML = `
-                    <h2>${item.title}</h2>
-                    ${item.thumbnail ? `<img src="${item.thumbnail}" alt="${item.title}" width="100">` : ''}
-                    <p>${item.variation_name}</p>
-                    <p>Цена: ${item.price} руб.</p>
-                    <p>Количество: ${item.quantity}</p>
-                    <p>Общая стоимость: ${item.total_price} руб.</p>
-                `;
-                cartItemsContainer.appendChild(itemElement);
-            });
-        }
-    }
-
-    function addToCart(variationId, articleId = null) {
-        const bodyData = variationId ? `variation_id=${variationId}` : `article_id=${articleId}`;
-        return fetch('/cart/', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'X-CSRFToken': getCookie('csrftoken'),
-            },
-            body: bodyData
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        });
-    }
-
-    function removeFromCart(articleId) {
-        return fetch(`/cart/remove/${articleId}/`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRFToken': getCookie('csrftoken'),
-            }
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-        });
+        cartItemsContainer.innerHTML = cartItems.map(item => `
+            <div class="cart-item" data-article-id="${item.article_id}">
+                <img src="${item.image_url}" alt="${item.name}" style="width: 50px; height: 50px;">
+                <span>${item.name}</span>
+                <span>${item.price}</span>
+                <button class="btn btn-sm btn-danger btn-remove-from-cart" data-article-id="${item.article_id}">Удалить</button>
+            </div>
+        `).join('');
     }
 
     function getCookie(name) {
@@ -217,6 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return cookieValue;
     }
 });
+
 
 
 

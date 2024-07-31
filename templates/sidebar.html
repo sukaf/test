@@ -11,7 +11,7 @@
     <style>
         .fixed-sidebar {
             position: fixed;
-            top: 100px; /* Подкорректируйте по необходимости */
+            top: 185px; /* Подкорректируйте по необходимости */
             width: 25%; /* Подкорректируйте по необходимости */
             z-index: 1000; /* Обеспечивает, что элемент будет поверх других */
             overflow-y: auto; /* Позволяет содержимому быть прокручиваемым, если оно превышает высоту */
@@ -23,11 +23,11 @@
 
 <div class="fixed-sidebar">
     <!-- Dropdown для выбора преподавателя -->
-    <div class="dropdown" id="teacher-dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="teacherDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             Преподаватели
         </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <ul class="dropdown-menu" aria-labelledby="teacherDropdown">
             <li><a class="dropdown-item" href="#" data-teacher-id="all">Все преподаватели</a></li>
             {% for teacher in teachers %}
             <li><a class="dropdown-item" href="#" data-teacher-id="{{ teacher.id }}">{{ teacher.name }}</a></li>
@@ -85,7 +85,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const teacherDropdownItems = document.querySelectorAll('#teacher-dropdown .dropdown-item');
+        const teacherDropdownItems = document.querySelectorAll('#teacherDropdown .dropdown-item');
         const filterForm = document.getElementById('filter-form');
         const teacherFilter = document.getElementById('teacher-filter');
 
