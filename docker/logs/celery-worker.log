@@ -21774,3 +21774,778 @@ Trying again in 32.00 seconds... (16/100)
 [2024-08-01 02:46:10,393: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
 Trying again in 32.00 seconds... (16/100)
 
+[2024-08-01 02:46:42,431: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:47:14,467: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:47:46,503: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:48:18,540: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:48:50,576: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:49:22,613: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:49:54,650: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:50:26,687: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:50:58,725: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:51:30,763: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:52:02,803: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:52:34,841: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:53:06,879: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:53:38,918: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:54:10,956: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:54:42,994: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:55:15,029: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:55:47,067: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:56:19,105: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:56:51,140: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:57:23,178: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:57:55,215: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:58:27,253: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 02:58:59,290: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:37:16,473: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:37:48,511: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:38:20,547: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:38:52,584: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:39:24,622: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:39:56,661: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:40:28,696: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:41:00,734: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:41:32,772: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:42:04,810: CRITICAL/MainProcess] Unrecoverable error: OperationalError('Error 111 connecting to 127.0.0.1:16379. Connection refused.')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/kombu/transport/virtual/base.py", line 951, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 614, in connect
+    sock = self.retry.call_with_retry(
+  File "/usr/local/lib/python3.9/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 615, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 680, in _connect
+    raise err
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 668, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/usr/local/lib/python3.9/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/usr/local/lib/python3.9/site-packages/kombu/transport/virtual/base.py", line 975, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "/usr/local/lib/python3.9/site-packages/kombu/transport/virtual/base.py", line 953, in create_channel
+    channel = self.Channel(connection)
+  File "/usr/local/lib/python3.9/site-packages/kombu/transport/redis.py", line 744, in __init__
+    self.client.ping()
+  File "/usr/local/lib/python3.9/site-packages/redis/commands/core.py", line 1134, in ping
+    return self.execute_command("PING", **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/redis/client.py", line 1224, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 1392, in get_connection
+    connection.connect()
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 620, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:16379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/worker.py", line 202, in start
+    self.blueprint.start(self)
+  File "/usr/local/lib/python3.9/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/usr/local/lib/python3.9/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py", line 340, in start
+    blueprint.start(self)
+  File "/usr/local/lib/python3.9/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/connection.py", line 21, in start
+    c.connection = c.connect()
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py", line 470, in connect
+    conn = self.connection_for_read(heartbeat=self.amqheartbeat)
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py", line 476, in connection_for_read
+    return self.ensure_connected(
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py", line 527, in ensure_connected
+    conn = conn.ensure_connection(
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 406, in ensure_connection
+    self._ensure_connection(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/usr/local/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:16379. Connection refused.
+[2024-08-01 07:42:12,552: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-01 07:42:12,559: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+[2024-08-01 07:42:14,564: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+[2024-08-01 07:42:18,572: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 6.00 seconds... (3/100)
+
+[2024-08-01 07:42:24,582: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 8.00 seconds... (4/100)
+
+[2024-08-01 07:42:32,593: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 10.00 seconds... (5/100)
+
+[2024-08-01 07:42:42,606: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 12.00 seconds... (6/100)
+
+[2024-08-01 07:42:54,623: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 14.00 seconds... (7/100)
+
+[2024-08-01 07:43:08,640: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 16.00 seconds... (8/100)
+
+[2024-08-01 07:43:24,661: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 18.00 seconds... (9/100)
+
+[2024-08-01 07:43:42,684: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 20.00 seconds... (10/100)
+
+[2024-08-01 07:44:02,709: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 22.00 seconds... (11/100)
+
+[2024-08-01 07:44:24,738: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 24.00 seconds... (12/100)
+
+[2024-08-01 07:44:48,766: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 26.00 seconds... (13/100)
+
+[2024-08-01 07:45:14,798: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 28.00 seconds... (14/100)
+
+[2024-08-01 07:45:42,832: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 30.00 seconds... (15/100)
+
+[2024-08-01 07:46:12,868: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:46:44,906: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:47:16,944: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:47:48,980: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:48:21,018: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:48:53,055: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:49:25,092: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:49:57,129: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:50:29,165: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:51:01,203: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:51:33,242: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:52:05,280: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:52:37,319: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:53:09,356: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:53:41,394: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:54:13,433: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:54:45,471: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:55:17,508: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:55:49,547: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:56:21,586: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:56:53,624: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:57:25,662: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:57:57,699: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:58:29,737: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:59:01,775: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 07:59:33,812: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:00:05,851: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:00:37,889: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:01:09,926: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:01:41,965: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:02:14,002: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:02:46,039: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:03:18,077: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:03:50,114: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:04:22,155: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:04:54,193: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:05:26,229: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:05:58,264: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:06:30,301: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:07:02,338: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:07:34,373: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:08:06,408: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:08:38,446: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:09:10,483: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:09:42,517: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:10:14,554: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:10:46,590: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:11:18,628: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:11:50,666: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:12:22,704: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:12:54,742: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:13:26,781: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:13:58,818: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:14:30,856: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:15:02,894: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:15:34,933: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:16:06,970: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:16:39,009: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:17:11,045: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:17:43,083: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:18:15,122: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:18:47,160: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:19:19,199: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:19:51,237: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:20:23,276: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:20:55,314: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:21:27,351: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:21:59,387: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:22:31,423: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:23:03,460: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:23:35,497: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:24:07,535: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:24:39,573: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:25:11,612: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:25:43,650: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:26:15,689: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:26:47,727: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:27:19,767: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:27:51,806: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:28:23,844: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:28:55,883: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:29:27,921: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:29:59,959: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:30:31,996: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:31:04,034: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 08:31:36,071: CRITICAL/MainProcess] Unrecoverable error: OperationalError('Error 111 connecting to 127.0.0.1:16379. Connection refused.')
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/kombu/transport/virtual/base.py", line 951, in create_channel
+    return self._avail_channels.pop()
+IndexError: pop from empty list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 614, in connect
+    sock = self.retry.call_with_retry(
+  File "/usr/local/lib/python3.9/site-packages/redis/retry.py", line 46, in call_with_retry
+    return do()
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 615, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 680, in _connect
+    raise err
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 668, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 472, in _reraise_as_library_errors
+    yield
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/usr/local/lib/python3.9/site-packages/kombu/utils/functional.py", line 318, in retry_over_time
+    return fun(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 934, in _connection_factory
+    self._connection = self._establish_connection()
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 860, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "/usr/local/lib/python3.9/site-packages/kombu/transport/virtual/base.py", line 975, in establish_connection
+    self._avail_channels.append(self.create_channel(self))
+  File "/usr/local/lib/python3.9/site-packages/kombu/transport/virtual/base.py", line 953, in create_channel
+    channel = self.Channel(connection)
+  File "/usr/local/lib/python3.9/site-packages/kombu/transport/redis.py", line 744, in __init__
+    self.client.ping()
+  File "/usr/local/lib/python3.9/site-packages/redis/commands/core.py", line 1134, in ping
+    return self.execute_command("PING", **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/redis/client.py", line 1224, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 1392, in get_connection
+    connection.connect()
+  File "/usr/local/lib/python3.9/site-packages/redis/connection.py", line 620, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 111 connecting to 127.0.0.1:16379. Connection refused.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/worker.py", line 202, in start
+    self.blueprint.start(self)
+  File "/usr/local/lib/python3.9/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/usr/local/lib/python3.9/site-packages/celery/bootsteps.py", line 365, in start
+    return self.obj.start()
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py", line 340, in start
+    blueprint.start(self)
+  File "/usr/local/lib/python3.9/site-packages/celery/bootsteps.py", line 116, in start
+    step.start(parent)
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/connection.py", line 21, in start
+    c.connection = c.connect()
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py", line 470, in connect
+    conn = self.connection_for_read(heartbeat=self.amqheartbeat)
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py", line 476, in connection_for_read
+    return self.ensure_connected(
+  File "/usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py", line 527, in ensure_connected
+    conn = conn.ensure_connection(
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 406, in ensure_connection
+    self._ensure_connection(*args, **kwargs)
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 459, in _ensure_connection
+    return retry_over_time(
+  File "/usr/local/lib/python3.9/contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/usr/local/lib/python3.9/site-packages/kombu/connection.py", line 476, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: Error 111 connecting to 127.0.0.1:16379. Connection refused.
+[2024-08-01 08:31:43,069: WARNING/MainProcess] /usr/local/lib/python3.9/site-packages/celery/worker/consumer/consumer.py:508: CPendingDeprecationWarning: The broker_connection_retry configuration setting will no longer determine
+whether broker connection retries are made during startup in Celery 6.0 and above.
+If you wish to retain the existing behavior for retrying connections on startup,
+you should set broker_connection_retry_on_startup to True.
+  warnings.warn(
+
+[2024-08-01 08:31:43,076: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 2.00 seconds... (1/100)
+
+[2024-08-01 08:31:45,081: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 4.00 seconds... (2/100)
+
+[2024-08-01 08:31:49,089: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 6.00 seconds... (3/100)
+
+[2024-08-01 08:31:55,098: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 8.00 seconds... (4/100)
+
+[2024-08-01 08:32:03,108: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 10.00 seconds... (5/100)
+
+[2024-08-01 08:32:13,122: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 12.00 seconds... (6/100)
+
+[2024-08-01 08:32:25,140: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 14.00 seconds... (7/100)
+
+[2024-08-01 08:32:39,158: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 16.00 seconds... (8/100)
+
+[2024-08-01 08:32:55,178: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 18.00 seconds... (9/100)
+
+[2024-08-01 08:33:13,200: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 20.00 seconds... (10/100)
+
+[2024-08-01 08:33:33,226: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 22.00 seconds... (11/100)
+
+[2024-08-01 08:33:55,254: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 24.00 seconds... (12/100)
+
+[2024-08-01 08:34:19,282: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 26.00 seconds... (13/100)
+
+[2024-08-01 08:34:45,313: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 28.00 seconds... (14/100)
+
+[2024-08-01 08:35:13,346: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 30.00 seconds... (15/100)
+
+[2024-08-01 10:58:06,282: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 10:58:38,365: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 10:59:10,402: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 10:59:42,439: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:07:07,320: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:07:39,358: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:08:11,396: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:08:43,434: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:09:15,472: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:09:47,511: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:10:19,550: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:10:51,587: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:11:23,625: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:11:55,663: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:12:27,701: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:12:59,740: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:13:31,781: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:14:03,820: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:14:35,859: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:15:07,896: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:15:39,935: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:16:11,971: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:16:44,009: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:17:16,046: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:17:48,084: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:18:20,123: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:18:52,162: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:19:24,201: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:19:56,239: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:20:28,278: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:21:00,317: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:21:32,353: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:22:04,392: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:22:36,430: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:23:08,468: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:23:40,506: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:24:12,545: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:24:44,582: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:25:16,621: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:25:48,660: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:26:20,700: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:26:52,738: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:27:24,777: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:27:56,815: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:28:28,854: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:29:00,890: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:29:32,927: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:30:04,964: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:30:37,001: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:31:09,038: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:31:41,076: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:32:13,113: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
+[2024-08-01 12:32:45,156: ERROR/MainProcess] consumer: Cannot connect to redis://127.0.0.1:16379/0: Error 111 connecting to 127.0.0.1:16379. Connection refused..
+Trying again in 32.00 seconds... (16/100)
+
