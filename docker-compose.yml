@@ -21,8 +21,6 @@ services:
     depends_on:
       - postgres
       - redis
-    networks:
-      - app_network
     command: >
       sh -c "python manage.py collectstatic --no-input &&
              python manage.py makemigrations &&
