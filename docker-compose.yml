@@ -27,7 +27,7 @@ services:
       sh -c "python manage.py collectstatic --no-input &&
              python manage.py makemigrations &&
              python manage.py migrate &&
-             gunicorn --workers=4 --reload --max-requests=1000 backend.wsgi -b 0.0.0.0:8000"
+             gunicorn --workers=4 --reload --max-requests=1000 education.wsgi -b 0.0.0.0:8000"
 
   nginx:
     container_name: nginx
@@ -93,7 +93,7 @@ services:
       - docker/env/.env.prod
     depends_on:
       - redis
-    command: celery -A backend beat --loglevel=info --logfile=./docker/logs/celery-beat.log
+    command: celery -A education beat --loglevel=info --logfile=./docker/logs/celery-beat.log
     volumes:
       - media:/app/media
       - ./:/app

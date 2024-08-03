@@ -16,7 +16,7 @@ COPY requirements.txt /app/
 
 # Устанавливаем зависимости из requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
-
+RUN pip install gunicorn
 RUN pip install celery
 
 # Копируем все содержимое текущей директории в /app в контейнере
