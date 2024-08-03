@@ -84,6 +84,6 @@ services:
     volumes:
       - media:/app/media
       - ./:/app
-    command: celery -A education beat --loglevel=info --logfile=./docker/logs/celery-beat.log
+#    command: celery -A education beat --loglevel=info --logfile=./docker/logs/celery-beat.log
     depends_on:
       - redis
