@@ -5,10 +5,7 @@ volumes:
   static:
   media:
 
-
-
 services:
-
   django:
     build:
       context: .
@@ -46,10 +43,10 @@ services:
       - ./docker/nginx/prod/:/etc/nginx/conf.d:ro
       - ./docker/certbot/conf:/etc/letsencrypt:ro
       - ./docker/certbot/www:/var/www/certbot:ro
-    links:
-      - django
     depends_on:
       - django
+    networks:
+      - app_network
 
   postgres:
     image: postgres:alpine
@@ -59,6 +56,8 @@ services:
       - docker/env/.env.prod
     volumes:
       - pgdata:/var/lib/postgresql/data/
+    networks:
+      - app_network
 
   redis:
     image: redis:alpine
@@ -69,6 +68,8 @@ services:
       - 6379
     volumes:
       - ./docker/redis/data:/data
+    networks:
+      - app_network
 
   celery-worker:
     build: .
@@ -82,6 +83,8 @@ services:
     command: celery -A education worker --loglevel=info --logfile=./docker/logs/celery-worker.log
     depends_on:
       - redis
+    networks:
+      - app_network
 
   celery-beat:
     build: .
@@ -94,6 +97,8 @@ services:
     volumes:
       - media:/app/media
       - ./:/app
+    networks:
+      - app_network
 
   certbot:
     image: certbot/certbot
@@ -104,5 +109,11 @@ services:
     command: certonly --webroot --webroot-path=/var/www/certbot/ --email dcghjas@gmail.com --agree-tos --no-eff-email -d aerenia.ru -d www.aerenia.ru
     depends_on:
       - nginx
+    networks:
+      - app_network
+
+networks:
+  app_network:
+
 
 
