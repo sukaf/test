@@ -5,10 +5,10 @@ volumes:
   static:
   media:
 
-networks:
-  app_network:
+
 
 services:
+
   django:
     build:
       context: .
@@ -30,7 +30,7 @@ services:
       sh -c "python manage.py collectstatic --no-input &&
              python manage.py makemigrations &&
              python manage.py migrate &&
-             gunicorn --workers=4 --reload --max-requests=1000 education.wsgi -b 0.0.0.0:8000"
+             gunicorn --workers=4 --reload --max-requests=1000 backend.wsgi -b 0.0.0.0:8000""
 
   nginx:
     container_name: nginx
@@ -48,8 +48,6 @@ services:
       - ./docker/certbot/www:/var/www/certbot:ro
     depends_on:
       - django
-    networks:
-      - app_network
 
   postgres:
     image: postgres:alpine
@@ -59,8 +57,6 @@ services:
       - docker/env/.env.prod
     volumes:
       - pgdata:/var/lib/postgresql/data/
-    networks:
-      - app_network
 
   redis:
     image: redis:alpine
@@ -71,8 +67,6 @@ services:
       - 6379
     volumes:
       - ./docker/redis/data:/data
-    networks:
-      - app_network
 
   celery-worker:
     build: .
@@ -86,22 +80,18 @@ services:
     command: celery -A education worker --loglevel=info --logfile=./docker/logs/celery-worker.log
     depends_on:
       - redis
-    networks:
-      - app_network
 
   celery-beat:
     build: .
     container_name: celery-beat
     env_file:
       - docker/env/.env.prod
+    depends_on:
+      - redis
+    command: celery -A backend beat --loglevel=info --logfile=./docker/logs/celery-beat.log
     volumes:
       - media:/app/media
       - ./:/app
-    command: celery -A education beat --loglevel=info --logfile=./docker/logs/celery-beat.log
-    depends_on:
-      - redis
-    networks:
-      - app_network
 
   certbot:
     image: certbot/certbot
@@ -112,6 +102,5 @@ services:
     command: certonly --webroot --webroot-path=/var/www/certbot/ --email dcghjas@gmail.com --agree-tos --no-eff-email -d aerenia.ru -d www.aerenia.ru
     depends_on:
       - nginx
-    networks:
-      - app_network
+
 
