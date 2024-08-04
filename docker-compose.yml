@@ -16,8 +16,8 @@ services:
       - docker/env/.env.prod
     volumes:
       - ./:/app
-      - static:/app/static
-      - media:/app/media
+      - static:/education/static
+      - media:/education/media
     depends_on:
       - postgres
       - redis
@@ -29,7 +29,7 @@ services:
 
   nginx:
     container_name: nginx
-    working_dir: /app
+    working_dir: /education
     image: nginx:stable-alpine
     restart: always
     ports:
@@ -88,7 +88,7 @@ services:
       - redis
     command: celery -A education beat --loglevel=info --logfile=./docker/logs/celery-beat.log
     volumes:
-      - media:/app/media
+      - media:/education/media
       - ./:/app
 
   certbot:
