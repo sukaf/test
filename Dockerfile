@@ -9,10 +9,10 @@ RUN apk update \
     && apk add --no-cache postgresql-dev gcc python3-dev musl-dev
 
 # Устанавливаем рабочую директорию в /app
-WORKDIR /app
+WORKDIR /education
 
 # Копируем файл зависимостей в рабочую директорию
-COPY requirements.txt /app/
+COPY requirements.txt /education/
 
 # Устанавливаем зависимости из requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
@@ -20,7 +20,7 @@ RUN pip install gunicorn
 RUN pip install celery
 
 # Копируем все содержимое текущей директории в /app в контейнере
-COPY . /app/
+COPY . /education/
 
 # Настройка записи и доступа (если нужно)
 # RUN chmod -R 777 ./
@@ -30,6 +30,6 @@ COPY . /app/
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
 
-RUN mkdir -p /app/docker/logs && touch /app/docker/logs/celery-worker.log
-RUN chmod -R 777 /app/docker/logs
+RUN mkdir -p /education/docker/logs && touch /education/docker/logs/celery-worker.log
+RUN chmod -R 777 /education/docker/logs
 
