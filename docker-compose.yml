@@ -1,39 +1,103 @@
 version: '3.8'
 
-services:
-  postgres:
-    image: postgres:latest
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: mydatabase
+volumes:
+  pgdata:
+  static:
+  media:
 
-  redis:
-    image: redis:latest
+services:
 
   django:
-    image: my_django_image
+    build:
+      context: .
     ports:
-      - "8000:8000"
+      - '8000:8000'
+    container_name: django
+    env_file:
+      - docker/env/.env.prod
+    volumes:
+      - ./:/django
+      - static:/django/static
+      - media:/django/media
     depends_on:
       - postgres
       - redis
+    command: sh -c "python manage.py collectstatic --no-input &&
+                    python manage.py makemigrations &&
+                    python manage.py migrate &&
+                    gunicorn --workers=4 --reload --max-requests=1000 education.wsgi -b 0.0.0.0:8000"
 
   nginx:
-    image: nginx:latest
+    container_name: nginx
+    working_dir: /django/education
+    image: nginx:stable-alpine
+    restart: always
     ports:
       - "80:80"
+      - "443:443"
+    volumes:
+      - static:/django/static
+      - media:/django/media
+      - ./docker/nginx/prod/:/etc/nginx/conf.d:ro
+      - ./docker/certbot/conf:/etc/letsencrypt:ro
+      - ./docker/certbot/www:/var/www/certbot:ro
+    links:
+      - django
     depends_on:
       - django
+
+  postgres:
+    image: postgres:alpine
+    container_name: postgres
+    restart: always
+    env_file:
+      - docker/env/.env.prod
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    env_file:
+      - docker/env/.env.prod
+    expose:
+      - 6379
+    volumes:
+      - ./docker/redis/data:/data
 
   celery-worker:
-    image: my_celery_image
+    build: .
+    container_name: celery-worker
+    restart: always
+    env_file:
+      - docker/env/.env.prod
+    volumes:
+      - ./:/django
+      - media:/django/media
+    command: celery -A education worker --loglevel=info --logfile=./docker/logs/celery-worker.log
     depends_on:
       - redis
-      - django
 
   celery-beat:
-    image: my_celery_image
-    depends_on:
-      - redis
-      - django
+      build: .
+      container_name: celery-beat
+      env_file:
+          - docker/env/.env.prod
+      depends_on:
+          - redis
+      command: celery -A education beat --loglevel=info --logfile=./docker/logs/celery-beat.log
+      volumes:
+          - media:/django/media
+          - ./:/django
+
+  certbot:
+      image: certbot/certbot
+      container_name: certbot
+      volumes:
+          - ./docker/certbot/conf:/etc/letsencrypt:rw
+          - ./docker/certbot/www:/var/www/certbot:rw
+      command: certonly --webroot --webroot-path=/var/www/certbot/ --email dcghjas@gmail.com --agree-tos --no-eff-email -d aerenia.ru -d www.aerenia.ru
+      depends_on:
+        - nginx
+
+
