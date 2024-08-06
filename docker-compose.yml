@@ -29,7 +29,7 @@ services:
 
   nginx:
     container_name: nginx
-    working_dir: /django
+    working_dir: /django/education
     image: nginx:stable-alpine
     restart: always
     ports:
