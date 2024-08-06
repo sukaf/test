@@ -34,7 +34,7 @@ services:
     restart: always
     ports:
       - "80:80"
-      - "443:443"
+#      - "443:443"
     volumes:
       - static:/django/static
       - media:/django/media
@@ -90,14 +90,14 @@ services:
           - media:/django/media
           - ./:/django
 
-  certbot:
-      image: certbot/certbot
-      container_name: certbot
-      volumes:
-          - ./docker/certbot/conf:/etc/letsencrypt:rw
-          - ./docker/certbot/www:/var/www/certbot:rw
-      command: certonly --webroot --webroot-path=/var/www/certbot/ --email dcghjas@gmail.com --agree-tos --no-eff-email -d aerenia.ru -d www.aerenia.ru
-      depends_on:
-        - nginx
+#  certbot:
+#      image: certbot/certbot
+#      container_name: certbot
+#      volumes:
+#          - ./docker/certbot/conf:/etc/letsencrypt:rw
+#          - ./docker/certbot/www:/var/www/certbot:rw
+#      command: certonly --webroot --webroot-path=/var/www/certbot/ --email dcghjas@gmail.com --agree-tos --no-eff-email -d aerenia.ru -d www.aerenia.ru
+#      depends_on:
+#        - nginx
 
 
