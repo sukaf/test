@@ -16,7 +16,7 @@ services:
     env_file:
       - docker/env/.env.prod
     volumes:
-      - ./:/app
+      - ./:/django
       - static:/django/static
       - media:/django/media
     depends_on:
@@ -25,11 +25,11 @@ services:
     command: sh -c "python manage.py collectstatic --no-input &&
                     python manage.py makemigrations &&
                     python manage.py migrate &&
-                    gunicorn --workers=4 --reload --max-requests=1000 backend.wsgi -b 0.0.0.0:8000""
+                    gunicorn --workers=4 --reload --max-requests=1000 education.wsgi -b 0.0.0.0:8000""
 
   nginx:
     container_name: nginx
-    working_dir: /app
+    working_dir: /django
     image: nginx:stable-alpine
     restart: always
     ports:
@@ -96,7 +96,7 @@ services:
       volumes:
           - ./docker/certbot/conf:/etc/letsencrypt:rw
           - ./docker/certbot/www:/var/www/certbot:rw
-      command: certonly --webroot --webroot-path=/var/www/certbot/ --email email@mail.com --agree-tos --no-eff-email -d example.com -d www.example.com
+      command: certonly --webroot --webroot-path=/var/www/certbot/ --email dcghjas@gmail.com --agree-tos --no-eff-email -d aerenia.ru -d www.aerenia.ru
       depends_on:
         - nginx
 
