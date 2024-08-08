@@ -33,7 +33,7 @@ services:
 
   frontend:
     container_name: frontend
-    working_dir: /education/static
+    working_dir: /education
     build:
       context: .
       dockerfile: ./Dockerfile
