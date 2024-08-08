@@ -17,8 +17,8 @@ services:
       - docker/env/.env.prod
     volumes:
       - ./:/app
-      - static:/app/static
-      - media:/app/media
+      - static:/education/static
+      - media:/education/media
     depends_on:
       - postgres
       - redis
@@ -74,7 +74,7 @@ services:
       - docker/env/.env.prod
     volumes:
       - ./:/app
-      - media:/app/media
+      - media:/education/media
     command: celery -A education worker --loglevel=info --logfile=./docker/logs/celery-worker.log
     depends_on:
       - redis
@@ -85,7 +85,7 @@ services:
     env_file:
       - docker/env/.env.prod
     volumes:
-      - media:/app/media
+      - media:/education/media
       - ./:/app
     command: celery -A education beat --loglevel=info --logfile=./docker/logs/celery-beat.log
     depends_on:
