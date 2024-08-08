@@ -36,7 +36,7 @@ services:
     working_dir: /education
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: Dockerfile.frontend
     volumes:
       - node_modules:/education/node_modules
     ports:
@@ -44,7 +44,7 @@ services:
     env_file:
       - ./docker/env/.env.prod
     depends_on:
-      - backend
+      - django
       - postgres
 
   nginx:
