@@ -17,7 +17,7 @@ services:
     command: sh -c "python manage.py collectstatic --no-input &&
                     python manage.py makemigrations &&
                     python manage.py migrate &&
-                    gunicorn --workers=4 --reload --max-requests=1000 engine.wsgi -b 0.0.0.0:8000"
+                    gunicorn --workers=4 --reload --max-requests=1000 education.wsgi -b 0.0.0.0:8000"
     depends_on:
       - postgres
 
