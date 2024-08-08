@@ -1,6 +1,6 @@
 # Используем базовый образ Python
 FROM python:3.9-alpine
-FROM node:14
+
 # Установка переменной среды PYTHONUNBUFFERED для вывода в реальном времени
 ENV PYTHONUNBUFFERED=1
 
@@ -18,21 +18,18 @@ COPY requirements.txt /education/
 RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install gunicorn
 RUN pip install celery
-RUN npm install
 
 # Копируем все содержимое текущей директории в /app в контейнере
-COPY . .
+COPY . /education/
 
 # Настройка записи и доступа (если нужно)
 # RUN chmod -R 777 ./
 
 # CMD указывает команду, которая будет выполнена при запуске контейнера
 # В данном случае предполагается, что у вас будет entrypoint.sh или manage.py для запуска Django приложения
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000", "npm", "start"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
 
 RUN mkdir -p /education/docker/logs && touch /education/docker/logs/celery-worker.log
 RUN chmod -R 777 /education/docker/logs
-
-EXPOSE 3000
 
