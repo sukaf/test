@@ -43,7 +43,6 @@ services:
       - "3000:3000"
     env_file:
       - ./docker/env/.env.prod
-    command: sh -c "pnpm i && pnpm run build && pnpm run start"
     depends_on:
       - backend
       - postgres
