@@ -31,8 +31,6 @@ services:
     ports:
       - "5432:5432"
 
-
-
   nginx:
     container_name: nginx
     working_dir: /education
@@ -56,21 +54,9 @@ services:
     expose:
       - 6379
 
-  certbot:
-    image: certbot/certbot
-    container_name: certbot
-    volumes:
-      - ./docker/certbot/conf:/etc/letsencrypt:rw
-      - ./docker/certbot/www:/var/www/certbot:rw
-    depends_on:
-      - nginx
-#    command: certonly --webroot --webroot-path=/var/www/certbot/ --email dcghjas@gmail.com --agree-tos --no-eff-email -d aerenia.ru -d www.aerenia.ru
-
 volumes:
   static:
   media:
   pgdata:
-  node_modules:
-
 
 
